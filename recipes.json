@@ -1,0 +1,267 @@
+{
+	"LumberMill.Folktails": {
+		"recipes": {
+			"default": {
+				"duration": "1.3h",
+				"inputs": {"Wood": 1},
+				"outputs": {"Planks": 1}
+			}
+		}
+	},
+
+	"GearWorkshop.Folktails": {
+		"recipes": {
+			"default": {
+				"duration": "3h",
+				"inputs": {"Planks": 1},
+				"outputs": {"Gears": 1}
+			}
+		}
+	},
+
+	"Paper Mill": {
+		"recipes": {
+			"default": {
+				"duration": "1.6h",
+				"inputs": {"Wood": 1},
+				"outputs": {"Paper": 2}
+			}
+		}
+	},
+
+	"Wood Workshop": {
+		"recipes": {
+			"default": {
+				"duration": "3h",
+				"inputs": {"Pine Resin": 1, "Planks": 1},
+				"outputs": {"Treated Planks": 1}
+			}
+		}
+	},
+
+	"Tappers Shack": {
+		"recipes": {
+			"default": {
+				"duration": "60m",
+				"inputs": {"Pine Resin -- Tree": 1},
+				"outputs": {"Pine Resin": 1}
+			}
+		}
+	},
+
+	"Printing Press": {
+		"recipes": {
+			"default": {
+				"duration": "1.5h",
+				"inputs": {"Paper": 1},
+				"outputs": {"Book": 2}
+			}
+		}
+	},
+
+	"Grill.Folktails": {
+		"recipes": {
+			"GrilledPotato": {
+				"name": "Potato",
+				"duration": "0.52h",
+				"inputs": {"Potato": 1},
+				"outputs": {"Grilled Potato": 4}
+			},
+			"B": {
+				"name": "Chestnut",
+				"duration": "0.33h",
+				"inputs": {"Chestnut": 1},
+				"outputs": {"Grilled Chestnut": 2}
+			},
+			"C": {
+				"name": "Spadderdock",
+				"duration": "0.4h",
+				"inputs": {"Spadderdock": 1},
+				"outputs": {"Grilled Spadderdock": 3}
+			}
+		}
+	},
+
+	"Gristmil.Folktails": {
+		"recipes": {
+			"A": {
+				"duration": "30m",
+				"inputs": {"Wheat": 1},
+				"outputs": {"Wheat Flour": 1}
+			},
+			"B": {
+				"duration": "66m",
+				"inputs": {"Cattail Root": 1},
+				"outputs": {"Cattail Flour": 1}
+			}
+		}
+	},
+
+	"Bakery.Folktails": {
+		"recipes": {
+			"A": {
+				"duration": "1h",
+				"inputs": {"Wheat Flour": 1},
+				"outputs": {"Bread": 5}
+			},
+			"B": {
+				"duration": "1.5h",
+				"inputs": {"Wheat Flour": 1, "Maple Syrup": 1},
+				"outputs": {"Maple pastries": 3}
+			},
+			"C": {
+				"duration": "0.5h",
+				"inputs": {"Cattail Flour": 1},
+				"outputs": {"Cattail Cracker": 4}
+			}
+		}
+	},
+
+	"WaterPump.Folktails": {
+		"recipes": {
+			"default": {
+				"duration": "0.33h",
+				"inputs": {},
+				"outputs": {"Water": 1}
+			}
+		}
+	},
+
+	"Large Water Pump": {
+		"recipes": {
+			"default": {
+				"duration": "0.33h",
+				"inputs": {},
+				"outputs": {"Water": 5}
+			}
+		}
+	},
+
+	"EfficientFarmHouse.Folktails": {
+		"recipes": {
+			"A": {
+				"name": "Carrot",
+				"duration": "4d",
+				"inputs": {},
+				"outputs": {"Carrot": 4}
+			},
+			"B": {
+				"name": "Potato",
+				"duration": "6d",
+				"inputs": {},
+				"outputs": {"Potato": 1}
+			}
+		}
+	},
+
+	"Herbalist.Folktails": {
+		"recipes": {
+			"default": {
+				"duration": "2h",
+				"inputs": {"Dandlions": 2, "Berry": 2, "Paper": 1},
+				"outputs": {"Antidote": 2}
+			}
+		}
+	},
+
+	"Inventor.Folktails": {
+		"recipes": {
+			"default": {
+				"duration": "1h",
+				"inputs": {},
+				"outputs": {"Science Points": 1}
+			}
+		}
+	},
+
+	"Observatory": {
+		"recipes": {
+			"default": {
+				"duration": "3h",
+				"inputs": {},
+				"outputs": {"Science Points": 10}
+			}
+		}
+	},
+
+	"Smelter": {
+		"recipes": {
+			"default": {
+				"duration": "4h",
+				"inputs": {"Scrap Metal": 2},
+				"outputs": {"Metal Block": 1}
+			}
+		}
+	},
+
+	"Birch": {
+		"recipes": {
+			"default": {
+				"duration": "9d",
+				"inputs": {},
+				"outputs": {"Wood": 1}
+			}
+		}
+	},
+
+	"Pine": {
+		"recipes": {
+			"default": {
+				"name": "Wood",
+				"duration": "12d",
+				"inputs": {},
+				"outputs": {"Wood": 2}
+			},
+			"B": {
+				"name": "Resin",
+				"duration": "7d",
+				"inputs": {},
+				"outputs": {"Pine Resin -- Tree": 2}
+			}
+		}
+	},
+
+	"ChestnutTree": {
+		"recipes": {
+			"A": {
+				"name": "Wood",
+				"duration": "24d",
+				"inputs": {},
+				"outputs": {"Wood": 4}
+			},
+			"B": {
+				"name": "Nut",
+				"duration": "8d",
+				"inputs": {},
+				"outputs": {"Chestnut": 3}
+			}
+		}
+	},
+
+	"Oak": {
+		"recipes": {
+			"default": {
+				"duration": "30d",
+				"inputs": {},
+				"outputs": {"Wood": 8}
+			}
+		}
+	},
+
+	"Maple": {
+		"recipes": {
+			"default": {
+				"name": "Wood",
+				"duration": "28d",
+				"inputs": {},
+				"outputs": {"Wood": 6}
+			},
+			"A": {
+				"name": "Syrup",
+				"duration": "12d",
+				"inputs": {},
+				"outputs": {"Maple Syrup": 3}
+			}
+		}
+	}
+}
