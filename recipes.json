@@ -137,23 +137,6 @@
 		}
 	},
 
-	"EfficientFarmHouse.Folktails": {
-		"recipes": {
-			"A": {
-				"name": "Carrot",
-				"duration": "4d",
-				"inputs": {},
-				"outputs": {"Carrot": 4}
-			},
-			"B": {
-				"name": "Potato",
-				"duration": "6d",
-				"inputs": {},
-				"outputs": {"Potato": 1}
-			}
-		}
-	},
-
 	"Herbalist.Folktails": {
 		"recipes": {
 			"default": {
@@ -194,12 +177,26 @@
 		}
 	},
 
+	"Oak": {
+		"recipes": {
+			"default": {
+				"duration": "30d",
+				"inputs": {},
+				"outputs": {"Wood": 8},
+				"needsCuttingArea": true,
+				"needsPlantingArea": true
+			}
+		}
+	},
+
 	"Birch": {
 		"recipes": {
 			"default": {
 				"duration": "9d",
 				"inputs": {},
-				"outputs": {"Wood": 1}
+				"outputs": {"Wood": 1},
+				"needsCuttingArea": true,
+				"needsPlantingArea": true
 			}
 		}
 	},
@@ -210,40 +207,38 @@
 				"name": "Wood",
 				"duration": "12d",
 				"inputs": {},
-				"outputs": {"Wood": 2}
+				"outputs": {"Wood": 2},
+				"needsCuttingArea": true,
+				"needsPlantingArea": true
 			},
 			"B": {
 				"name": "Resin",
 				"duration": "7d",
 				"inputs": {},
-				"outputs": {"Pine Resin -- Tree": 2}
+				"outputs": {"Pine Resin -- Tree": 2},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true
 			}
 		}
 	},
 
 	"ChestnutTree": {
 		"recipes": {
-			"A": {
+			"default": {
 				"name": "Wood",
 				"duration": "24d",
 				"inputs": {},
-				"outputs": {"Wood": 4}
+				"outputs": {"Wood": 4},
+				"needsCuttingArea": true,
+				"needsPlantingArea": true
 			},
 			"B": {
 				"name": "Nut",
 				"duration": "8d",
 				"inputs": {},
-				"outputs": {"Chestnut": 3}
-			}
-		}
-	},
-
-	"Oak": {
-		"recipes": {
-			"default": {
-				"duration": "30d",
-				"inputs": {},
-				"outputs": {"Wood": 8}
+				"outputs": {"Chestnut": 3},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true
 			}
 		}
 	},
@@ -254,13 +249,17 @@
 				"name": "Wood",
 				"duration": "28d",
 				"inputs": {},
-				"outputs": {"Wood": 6}
+				"outputs": {"Wood": 6},
+				"needsCuttingArea": true,
+				"needsPlantingArea": true
 			},
 			"A": {
 				"name": "Syrup",
 				"duration": "12d",
 				"inputs": {},
-				"outputs": {"Maple Syrup": 3}
+				"outputs": {"Maple Syrup": 3},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true
 			}
 		}
 	}

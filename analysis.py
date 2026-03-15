@@ -1,19 +1,38 @@
 game_name = "Plankshire"
-path = f"/home/lukas/.local/share/Steam/steamapps/compatdata/1062090/pfx/drive_c/users/steamuser/Documents/Timberborn/Saves/{game_name}/{game_name}.timber"
+game_dir = f"/home/lukas/.local/share/Steam/steamapps/compatdata/1062090/pfx/drive_c/users/steamuser/Documents/Timberborn/Saves/{game_name}/"
 
 import json
 import zipfile
 from collections import Counter
+import glob
+import os
 
 OUTPUT_PATH = f"./{game_name}.analysis.json"
+
+def coord2tuple(v):
+    return (v['X'], v['Y'], v['Z'])
 
 recipes_path = "./recipes.json"
 with open(recipes_path) as f:
     recipes = json.load(f)
 
+def latest_save(dir):
+    list_of_files = glob.glob(game_dir+"*.timber")
+    latest_file = max(list_of_files, key=os.path.getctime)
+    return latest_file
+path = latest_save(game_dir)
+print(f"Select '{path}' as savefile")
+
 with zipfile.ZipFile(path) as z:
     with z.open("world.json") as f:
         world = json.load(f)
+
+
+planting_area = {
+    t: set(map(coord2tuple, vs))
+    for (t,vs) in world['Singletons']['PlantingService']['PlantingMap'].items()
+}
+cutting_area = set(map(coord2tuple, world['Singletons']['TreeCuttingArea']['CuttingArea']))
 
 # # counter for building types
 # template_counts = Counter(
@@ -33,7 +52,7 @@ for e in world["Entities"]:
 
     comps = e.get("Components", {})
 
-    finished = comps.get("BlockObjectState", {}).get("Finished", False)
+    finished = comps.get("BlockObjectState", {}).get("Finished", True)
     paused   = comps.get("PausableBuilding", {}).get("Paused", False)
 
     if not finished or paused:
@@ -44,9 +63,19 @@ for e in world["Entities"]:
 
     if manufactory:
         recipe_name = manufactory.get("CurrentRecipe", "default")
-        print(recipe_name)
     else:
-        recipe_name = None
+        recipe_name = "default"
+
+    if template in recipes:
+        recipe = recipes[template]['recipes'][recipe_name]
+        coord = coord2tuple(comps['BlockObject']['Coordinates'])
+        skip = False
+        if recipe.get('needsCuttingArea', False) and coord not in cutting_area:
+            skip = True
+        if recipe.get('needsPlantingArea', False) and coord not in planting_area[template]:
+            skip = True
+
+        if skip: continue
 
     active_recipes[(template, recipe_name)] += 1
 
