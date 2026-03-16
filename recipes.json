@@ -3,7 +3,7 @@
 		"recipes": {
 			"default": {
 				"duration": "1.3h",
-				"inputs": {"Wood": 1},
+				"inputs": {"Wood": 1, "Power": 50},
 				"outputs": {"Planks": 1}
 			}
 		}
@@ -13,7 +13,7 @@
 		"recipes": {
 			"default": {
 				"duration": "3h",
-				"inputs": {"Planks": 1},
+				"inputs": {"Planks": 1, "Power": 120},
 				"outputs": {"Gears": 1}
 			}
 		}
@@ -64,19 +64,19 @@
 			"GrilledPotato": {
 				"name": "Potato",
 				"duration": "0.52h",
-				"inputs": {"Potato": 1},
+				"inputs": {"Potato": 1, "Wood": 0.1},
 				"outputs": {"Grilled Potato": 4}
 			},
-			"B": {
+			"GrilledChestnut": {
 				"name": "Chestnut",
 				"duration": "0.33h",
-				"inputs": {"Chestnut": 1},
+				"inputs": {"Chestnut": 1, "Wood": 0.1},
 				"outputs": {"Grilled Chestnut": 2}
 			},
 			"C": {
 				"name": "Spadderdock",
 				"duration": "0.4h",
-				"inputs": {"Spadderdock": 1},
+				"inputs": {"Spadderdock": 1, "Wood": 0.1},
 				"outputs": {"Grilled Spadderdock": 3}
 			}
 		}
@@ -192,7 +192,7 @@
 	"Birch": {
 		"recipes": {
 			"default": {
-				"duration": "9d",
+				"duration": "7d",
 				"inputs": {},
 				"outputs": {"Wood": 1},
 				"needsCuttingArea": true,
@@ -226,14 +226,15 @@
 		"recipes": {
 			"default": {
 				"name": "Wood",
-				"duration": "24d",
+				"duration": "23d",
 				"inputs": {},
 				"outputs": {"Wood": 4},
 				"needsCuttingArea": true,
 				"needsPlantingArea": true
 			},
-			"B": {
+			"nut": {
 				"name": "Nut",
+				"canFallbackTo": true,
 				"duration": "8d",
 				"inputs": {},
 				"outputs": {"Chestnut": 3},
@@ -253,13 +254,91 @@
 				"needsCuttingArea": true,
 				"needsPlantingArea": true
 			},
-			"A": {
+			"syrup": {
 				"name": "Syrup",
+				"canFallbackTo": true,
 				"duration": "12d",
 				"inputs": {},
 				"outputs": {"Maple Syrup": 3},
 				"needsCuttingArea": false,
 				"needsPlantingArea": true
+			}
+		}
+	},
+
+	"BlueberryBush": {
+		"recipes": {
+			"default": {
+				"duration": "12d",
+				"inputs": {},
+				"outputs": {"Blueberry": 3},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true,
+				"needsGrowthProgress": 1.0
+			}
+		}
+	},
+
+	"Carrot": {
+		"recipes": {
+			"default": {
+				"duration": "4d",
+				"inputs": {},
+				"outputs": {"Carrot": 3},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true
+			}
+		}
+	},
+
+	"Potato": {
+		"recipes": {
+			"default": {
+				"duration": "6d",
+				"inputs": {},
+				"outputs": {"Potato": 1},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true
+			}
+		}
+	},
+
+	"Sunflower": {
+		"recipes": {
+			"default": {
+				"duration": "5d",
+				"inputs": {},
+				"outputs": {"Sunflower": 2},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true
+			}
+		}
+	},
+
+	"Food": {
+		"recipes": {
+			"default": {
+				"duration": "1s",
+				"inputs": {
+						"Sunflower": 0,
+						"Bread": 0,
+						"Maple pastries": 0,
+						"Cattail Cracker": 0,
+						"Grilled Chestnut": 0,
+						"Grilled Potato": 0,
+						"Grilled Spadderdock": 0,
+						"Carrot": 0
+				},
+				"outputs": {"Food": 1}
+			}
+		}
+	},
+
+	"BeaverAdult": {
+		"recipes": {
+			"default": {
+				"duration": "1d",
+				"inputs": { "Water": 0, "Food": 0}
 			}
 		}
 	}
