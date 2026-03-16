@@ -27,6 +27,7 @@ with zipfile.ZipFile(path) as z:
     with z.open("world.json") as f:
         world = json.load(f)
 
+assert world['GameVersion'] == "1.0.12.5-3db367b-sw", f"Unknwon gameversion {world['GameVersion']} seen"
 
 planting_area = {
     t: set(map(coord2tuple, vs))
