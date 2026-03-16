@@ -1,3 +1,4 @@
 *.json
 !recipes.json
+!ignore.json
 Makefile
