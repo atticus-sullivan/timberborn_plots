@@ -87,6 +87,9 @@ for e in world["Entities"]:
 
     active_recipes[(template, recipe_name)] += 1
 
+# artificially added buildings
+active_recipes[("Food", "default")] += 1
+
 # print(active_templates)
 
 # collect huts
