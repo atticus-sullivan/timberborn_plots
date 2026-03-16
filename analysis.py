@@ -63,20 +63,27 @@ for e in world["Entities"]:
     manufactory = comps.get("Manufactory")
 
     if manufactory:
-        recipe_name = manufactory.get("CurrentRecipe", "default")
+        recipe_name_init = manufactory.get("CurrentRecipe", "default")
     else:
-        recipe_name = "default"
+        recipe_name_init = "default"
 
     if template in recipes:
-        recipe = recipes[template]['recipes'][recipe_name]
-        coord = coord2tuple(comps['BlockObject']['Coordinates'])
-        skip = False
-        if recipe.get('needsCuttingArea', False) and coord not in cutting_area:
-            skip = True
-        if recipe.get('needsPlantingArea', False) and coord not in planting_area[template]:
-            skip = True
+        for recipe_name in [recipe_name_init, *map(lambda x: x[0], filter(lambda x: x[1].get("canFallbackTo", False), recipes[template]['recipes'].items()))]:
+            recipe = recipes[template]['recipes'][recipe_name]
+            coord = coord2tuple(comps.get('BlockObject', {}).get('Coordinates', {"X":0, "Y":0, "Z": 0}))
+            skip = False
+            if recipe.get('needsCuttingArea', False) and coord not in cutting_area:
+                skip = True
+            if recipe.get('needsPlantingArea', False) and coord not in planting_area.get(template, {}):
+                skip = True
+            if (g := recipe.get('needsGrowthProgress', None)) and g and comps.get("Growable", {}).get("GrowthProgress", 0) < g:
+                skip = True
 
-        if skip: continue
+            if skip: continue
+            break
+        else: continue # executed if the for-loop terminates normally (no break)
+    else:
+        recipe_name = recipe_name_init
 
     active_recipes[(template, recipe_name)] += 1
 
