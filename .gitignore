@@ -2,7 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-*.json
-!recipes.json
-!ignore.json
+data/*.json
+!data/recipes.json
+!data/ignore.json
 Makefile
+__pycache__

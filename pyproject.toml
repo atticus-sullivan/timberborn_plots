@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Lukas Heindl
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[project]
+name = "timberborn-plots"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project.scripts]
+timberborn-analysis    = "timberborn_plots.cli.analysis:main"
+timberborn-check-names = "timberborn_plots.cli.check_names:main"

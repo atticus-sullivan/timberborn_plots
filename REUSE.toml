@@ -1,7 +1,7 @@
 version = 1
 
 [[annotations]]
-path = ["recipes.json", "ignore.json"]
+path = ["data/recipes.json", "data/ignore.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 Lukas Heindl"
 SPDX-License-Identifier = "GPL-3.0-or-later"
