@@ -7,3 +7,4 @@ data/*.json
 !data/ignore.json
 Makefile
 __pycache__
+timberborn_plots.egg-info/

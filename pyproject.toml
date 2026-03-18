@@ -4,11 +4,11 @@
 
 [project]
 name = "timberborn-plots"
-version = "0.1.0"
+version = "0.1.1"
 
 [tool.setuptools.packages.find]
 where = ["."]
 
 [project.scripts]
-timberborn-analysis    = "timberborn_plots.cli.analysis:main"
-timberborn-check-names = "timberborn_plots.cli.check_names:main"
+timberbornplots-analysis    = "timberborn_plots.cli.analysis:main"
+timberbornplots-check-names = "timberborn_plots.cli.check_names:main"

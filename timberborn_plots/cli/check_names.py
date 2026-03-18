@@ -8,7 +8,7 @@ import os
 from pathlib import Path
 from argparse import ArgumentParser
 
-from timbertools.utils import latest_save, parse_args
+from timberborn_plots.utils import latest_save, parse_args
 
 DATA_DIR = Path(__file__).parent / "data"
 
