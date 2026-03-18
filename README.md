@@ -6,6 +6,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 # timberborn_plots
 
+> [!NOTE]
+> The output of this can nicely be used in conjunction with [timberborn_drawing](https://github.com/atticus-sullivan/timberborn_drawing) (a (Lua)LaTeX package)
+
 ## Installation
 ### Option1: via pipx (recommended)
 ```bash
