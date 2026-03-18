@@ -50,6 +50,31 @@ options:
   -h, --help     show this help message and e
 ```
 
+## Output
+The output of the analysis is a json file like the following
+
+```json
+[
+  {
+    "template": "LumberMill.Folktails",
+    "name": "LumberMill.Folktails",
+    "recipe": null,
+    "cnt": 5,
+    "dur": "1.3h",
+    "inputs": {
+      "Wood": 1,
+      "Power": 50
+    },
+    "outputs": {
+      "Planks": 1
+    }
+  }
+]
+```
+
+This is the aggregated, filtered ans enriched data from the savefile.
+Also it is more standardized so it is easier to parse.
+
 ## Data
 There are two or three sources for data:
 
