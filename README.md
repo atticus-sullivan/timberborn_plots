@@ -54,6 +54,12 @@ options:
 There are two or three sources for data:
 
 ### Savefile
+The savefile is generally specified by
+1. the general directory where timberborn places the savefiles, and
+2. the name of the game/map specified when creating the new game
+
+The path is then constructed `dir/name/` in this directory the scripts use the
+most recent `.timber` file as savefile.
 
 ### Recipes
 This specifies how a "hut" transforms how many resources into how many other
