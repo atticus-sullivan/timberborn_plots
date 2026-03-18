@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Lukas Heindl
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 game_name = "Plankshire"
 game_dir = f"/home/lukas/.local/share/Steam/steamapps/compatdata/1062090/pfx/drive_c/users/steamuser/Documents/Timberborn/Saves/{game_name}/"
 
