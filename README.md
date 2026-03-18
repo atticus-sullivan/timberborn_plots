@@ -9,6 +9,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
 > [!NOTE]
 > The output of this can nicely be used in conjunction with [timberborn_drawing](https://github.com/atticus-sullivan/timberborn_drawing) (a (Lua)LaTeX package)
 
+> [!NOTE]
+> https://steamcommunity.com/sharedfiles/filedetails/?id=3321521358 might also
+> be interesting for an approach which is more intrgrated into the game itself.
+
 ## Installation
 ### Option1: via pipx (recommended)
 ```bash
