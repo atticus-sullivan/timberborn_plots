@@ -4,7 +4,9 @@
 
 from collections import Counter
 
-def obtain_stats(world: dict, recipes: dict, cutting_are: set[tuple[int,int,int]], planting_area: dict[str,set[tuple[int,int,int]]]):
+from timberborn_plots.utils import coord2tuple
+
+def obtain_stats(world: dict, recipes: dict, cutting_area: set[tuple[int,int,int]], planting_area: dict[str,set[tuple[int,int,int]]]):
     # count active buildings
     # active_templates = Counter()
 

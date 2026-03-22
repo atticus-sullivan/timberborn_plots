@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 data/*.json
+*.json
 !data/recipes.json
 !data/ignore.json
 Makefile

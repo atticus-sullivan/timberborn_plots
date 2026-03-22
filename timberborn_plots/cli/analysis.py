@@ -4,11 +4,13 @@
 
 from argparse import ArgumentParser
 from pathlib import Path
+import json
+import zipfile
 
 from timberborn_plots.utils import latest_save, coord2tuple, parse_args
 from timberborn_plots.analysis import obtain_stats, generate_hut_output
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).parent.parent.parent / "data"
 
 ########
 # MAIN #
