@@ -15,6 +15,7 @@
 	"LargePile.Folktails",
 	"Lodge.Folktails",
 	"LumberjackFlag.Folktails",
+	"ScavengerFlag.Folktails",
 	"MediumTank.Folktails",
 	"MediumWarehouse.Folktails",
 	"NaturalDam",
@@ -40,5 +41,16 @@
 	"TeethGrindstone.Folktails",
 	"UndergroundRuins",
 	"WaterSource",
-	"WaterWheel.Folktails"
+	"WaterWheel.Folktails",
+	"WindTurbine.Folktails",
+	"Food",
+	"Roof1x2.Folktails",
+	"Shower.Folktails",
+	"Floodgate.Folktails",
+	"DistrictCrossing.Folktails",
+	"LargeWarehouse.Folktails",
+	"MedicalBed.Folktails",
+	"TappersShack.Folktails",
+	"TriplePlatform.Folktails",
+	"VerticalPowerShaft.Folktails"
 ]

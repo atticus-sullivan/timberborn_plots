@@ -19,32 +19,12 @@
 		}
 	},
 
-	"Paper Mill": {
-		"recipes": {
-			"default": {
-				"duration": "1.6h",
-				"inputs": {"Wood": 1},
-				"outputs": {"Paper": 2}
-			}
-		}
-	},
-
 	"Wood Workshop": {
 		"recipes": {
 			"default": {
 				"duration": "3h",
 				"inputs": {"Pine Resin": 1, "Planks": 1},
 				"outputs": {"Treated Planks": 1}
-			}
-		}
-	},
-
-	"Tappers Shack": {
-		"recipes": {
-			"default": {
-				"duration": "60m",
-				"inputs": {"Pine Resin -- Tree": 1},
-				"outputs": {"Pine Resin": 1}
 			}
 		}
 	},
@@ -78,21 +58,6 @@
 				"duration": "0.4h",
 				"inputs": {"Spadderdock": 1, "Wood": 0.1},
 				"outputs": {"Grilled Spadderdock": 3}
-			}
-		}
-	},
-
-	"Gristmil.Folktails": {
-		"recipes": {
-			"A": {
-				"duration": "30m",
-				"inputs": {"Wheat": 1},
-				"outputs": {"Wheat Flour": 1}
-			},
-			"B": {
-				"duration": "66m",
-				"inputs": {"Cattail Root": 1},
-				"outputs": {"Cattail Flour": 1}
 			}
 		}
 	},
@@ -163,16 +128,6 @@
 				"duration": "3h",
 				"inputs": {},
 				"outputs": {"Science Points": 10}
-			}
-		}
-	},
-
-	"Smelter": {
-		"recipes": {
-			"default": {
-				"duration": "4h",
-				"inputs": {"Scrap Metal": 2},
-				"outputs": {"Metal Block": 1}
 			}
 		}
 	},
@@ -279,6 +234,31 @@
 		}
 	},
 
+	"Dandelion": {
+		"recipes": {
+			"default": {
+				"duration": "2d",
+				"inputs": {},
+				"outputs": {"Dandelion": 1},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true,
+				"needsGrowthProgress": 1.0
+			}
+		}
+	},
+
+	"Wheat": {
+		"recipes": {
+			"default": {
+				"duration": "10d",
+				"inputs": {},
+				"outputs": {"Wheat": 3},
+				"needsCuttingArea": false,
+				"needsPlantingArea": true
+			}
+		}
+	},
+
 	"Carrot": {
 		"recipes": {
 			"default": {
@@ -339,6 +319,41 @@
 			"default": {
 				"duration": "1d",
 				"inputs": { "Water": 0, "Food": 0}
+			}
+		}
+	},
+
+	"Gristmill.Folktails": {
+		"recipes": {
+			"Wheat flour": {
+				"duration": "0.5h",
+				"inputs": {"Wheat": 1, "Power": 60},
+				"outputs": {"Wheat flour": 1}
+			},
+			"Cattail flour": {
+				"duration": "0.25h",
+				"inputs": {"Cattail roota": 1},
+				"outputs": {"Cattail flour": 1}
+			}
+		}
+	},
+
+	"PaperMill.Folktails": {
+		"recipes": {
+			"default": {
+				"duration": "1.6h",
+				"inputs": {"Wood": 1, "Power": 80},
+				"outputs": {"Paper": 2}
+			}
+		}
+	},
+
+	"Smelter.Folktails": {
+		"recipes": {
+			"default": {
+				"duration": "2h",
+				"inputs": {"Scrap metal": 2, "Wood": 0.2, "Power": 200},
+				"outputs": {"Metal blocks": 1}
 			}
 		}
 	}
