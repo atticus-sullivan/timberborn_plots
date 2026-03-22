@@ -10,7 +10,7 @@ from argparse import ArgumentParser
 
 from timberborn_plots.utils import latest_save, parse_args
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).parent.parent.parent / "data"
 
 ########
 # MAIN #
@@ -18,7 +18,7 @@ DATA_DIR = Path(__file__).parent / "data"
 def main():
     # init
     args = parse_args()
-    path = latest_save(game_dir)
+    path = latest_save(args.savefile_path / args.game_name)
     print(f"Select '{path}' as savefile")
 
     # read input files
